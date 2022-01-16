@@ -4,7 +4,9 @@ const { Schema } = mongoose;
 const otpSchema = new Schema({
   mobile: String,
   code: Number,
-  expire_at: { type: Date, default: Date.now, expires: 3000 },
+  createdAt: { type: Date, default: Date.now },
 });
+
+otpSchema.index({ createdAt: 1 }, { expireAfterSeconds: 300 });
 
 module.exports = mongoose.model("OTP", otpSchema);
