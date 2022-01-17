@@ -5,6 +5,7 @@ const centerSchema = new Schema({
   centerName: String,
   state: String,
   city: String,
+  pinCode: Number,
   slotsAvailable: Number, //per day
 });
 

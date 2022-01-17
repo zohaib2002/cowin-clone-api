@@ -6,6 +6,7 @@ const userSchema = new Schema({
   identityNo: String,
   mobile: String, // mobile is used as ID
   appointmentId: String,
+  dosesTaken: Number,
 });
 
 module.exports = mongoose.model("User", userSchema);

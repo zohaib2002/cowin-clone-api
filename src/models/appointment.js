@@ -11,6 +11,8 @@ const appointmentSchema = new Schema({
   centerId: String,
 });
 
-appointmentSchema.index({ appointmentDate: 1 }, { expireAfterSeconds: 86400 });
+// Appointments automatically expire (delete) after 30 days
+// User has to wait 30 days before booking next appointment
+appointmentSchema.index({ appointmentDate: 1 }, { expireAfterSeconds: 2592000 });
 
 module.exports = mongoose.model("Appointment", appointmentSchema);

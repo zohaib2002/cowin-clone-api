@@ -1,7 +1,7 @@
 module.exports = {
   DB: [
     {
-      state: "Andaman & Nicobar Islands",
+      state: "Andaman and Nicobar Islands",
       cities: ["Port Blair"],
     },
 
@@ -361,15 +361,7 @@ module.exports = {
 
     {
       state: "Goa",
-      cities: [
-        "Aldona",
-        "Curchorem Cacora",
-        "Madgaon",
-        "Mapusa",
-        "Margao",
-        "Marmagao",
-        "Panaji",
-      ],
+      cities: ["Aldona", "Curchorem Cacora", "Madgaon", "Mapusa", "Margao", "Marmagao", "Panaji"],
     },
 
     {
@@ -1022,14 +1014,7 @@ module.exports = {
 
     {
       state: "Nagaland",
-      cities: [
-        "Dimapur",
-        "Kohima",
-        "Mokokchung",
-        "Tuensang",
-        "Wokha",
-        "Zunheboto",
-      ],
+      cities: ["Dimapur", "Kohima", "Mokokchung", "Tuensang", "Wokha", "Zunheboto"],
     },
 
     {
