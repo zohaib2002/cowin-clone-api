@@ -63,7 +63,7 @@ exports.create = function (req, res) {
                   const appointmentDate = new Date(date);
                   const now = new Date();
 
-                  if (appointmentDate < now) {
+                  if (appointmentDate <= now) {
                     // Cannot book appointment on the same day
                     res.status(400).send({ msg: "Invalid Date" });
                   } else if ((appointmentDate - now) / (1000 * 3600 * 24) > 14) {
@@ -153,7 +153,7 @@ exports.query = function (req, res) {
       if (error) {
         res.status(500).send({ error: "Unable to fetch appointments" });
       } else {
-        res.status(200).send(appointments);
+        res.status(200).send({ results: appointments });
       }
     });
   } else {

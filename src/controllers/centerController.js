@@ -107,7 +107,7 @@ exports.query = function (req, res) {
         res.status(500).send({ error: "Unable to fetch centers" });
       } else {
         // returns empty list if no centers found
-        res.status(200).send(centers);
+        res.status(200).send({ results: centers });
       }
     });
   } else {

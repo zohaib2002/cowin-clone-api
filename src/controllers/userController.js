@@ -101,7 +101,7 @@ exports.set = function (req, res) {
       mobile: mobile,
     };
 
-    User.findOneAndUpdate({ mobile: mobile }, newUser, function (err, user) {
+    User.findOneAndUpdate({ mobile: mobile }, newUser, { new: true }, function (err, user) {
       if (err) {
         res.status(500).send({ error: "Unable to modify user" });
       } else {
