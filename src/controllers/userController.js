@@ -101,14 +101,14 @@ exports.set = function (req, res) {
       mobile: mobile,
     };
 
-    User.updateOne({ mobile: mobile }, newUser, function (err, docs) {
+    User.findOneAndUpdate({ mobile: mobile }, newUser, function (err, user) {
       if (err) {
         res.status(500).send({ error: "Unable to modify user" });
       } else {
-        if (docs.modifiedCount === 0) {
+        if (!user) {
           res.status(400).send({ msg: "Mobile number not registered" });
         } else {
-          res.status(200).send(docs);
+          res.status(200).send(user);
         }
       }
     });
