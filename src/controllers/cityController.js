@@ -2,6 +2,16 @@ const mongoose = require("mongoose");
 
 const Cities = require("../../cities");
 
+// Get all states of India
+exports.show = function (erq, res) {
+  var states = [];
+  for (let i = 0; i < Cities.DB.length; i++) {
+    states.push(Cities.DB[i].state);
+  }
+
+  res.status(200).send({ states: states });
+};
+
 // Get Cities of a state
 exports.query = function (req, res) {
   //Regex expression to replace '+' with ' '

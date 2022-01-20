@@ -1,5 +1,6 @@
 const cityController = require("../controllers/cityController");
 
 module.exports = (app) => {
-  app.get("/cities/:state", cityController.query);
+  app.get("/states", cityController.show);
+  app.get("/states/:state", cityController.query);
 };

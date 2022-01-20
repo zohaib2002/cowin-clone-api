@@ -79,7 +79,7 @@ exports.validate = function (req, res) {
           }
         });
       } else {
-        res.status(400).send({ msg: "Invalid OTP" });
+        res.status(205).send({ msg: "Invalid OTP" });
       }
     }
   });
