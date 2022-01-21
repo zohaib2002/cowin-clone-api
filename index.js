@@ -6,7 +6,7 @@ const cors = require("cors");
 const app = express();
 
 // Define database connection
-const db = mongoose.connect("mongodb+srv://cowin:12345@cowin.o50hc.mongodb.net/CoWIN?retryWrites=true&w=majority");
+const db = mongoose.connect(process.env.CONNECTION_STRING);
 
 // Use middleware
 app.use(express.json());
