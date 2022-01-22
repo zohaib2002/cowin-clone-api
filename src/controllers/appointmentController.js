@@ -137,7 +137,7 @@ exports.show = function (req, res) {
       if (appointment != null) {
         res.status(200).send(appointment);
       } else {
-        res.status(400).send({ msg: "Appointment not found / Appointment expired" });
+        res.status(205).send({ msg: "Appointment not found / Appointment expired" });
       }
     }
   });

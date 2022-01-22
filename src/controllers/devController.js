@@ -72,11 +72,11 @@ exports.fill = function (req, res) {
 
         console.log(center);
 
-        // center.save(function(err, savedCenter) {
-        //     if (err) {
-        //         res.status(500).send({error: err})
-        //     }
-        // })
+        // center.save(function (err, savedCenter) {
+        //   if (err) {
+        //     res.status(500).send({ error: err });
+        //   }
+        // });
       }
     }
   }
